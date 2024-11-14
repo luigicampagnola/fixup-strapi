@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_cities",
+  "info": {
+    "displayName": "cities"
+  },
+  "options": {},
+  "attributes": {
+    "cities": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

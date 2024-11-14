@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_facebooks",
+  "info": {
+    "displayName": "facebook"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    }
+  }
+}

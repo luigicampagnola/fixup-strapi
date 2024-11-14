@@ -1,0 +1,52 @@
+{
+  "collectionName": "components_shared_nav_bars",
+  "info": {
+    "displayName": "NavBar",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "locations": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.locations"
+    },
+    "financing": {
+      "displayName": "financing",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.financing"
+    },
+    "projects": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.financing"
+    },
+    "aboutUs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.financing"
+    },
+    "blog": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.financing"
+    },
+    "freeEstimates": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.financing"
+    }
+  }
+}

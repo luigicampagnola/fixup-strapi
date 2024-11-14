@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_locations",
+  "info": {
+    "displayName": "locations",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "counties": {
+      "displayName": "counties",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.counties"
+    },
+    "label": {
+      "type": "string"
+    }
+  }
+}

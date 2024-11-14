@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_top_bars",
+  "info": {
+    "displayName": "TopBar",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "address": {
+      "type": "string"
+    },
+    "email": {
+      "displayName": "email",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.email"
+    },
+    "phoneNumber": {
+      "displayName": "phone",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.phone"
+    },
+    "facebook": {
+      "displayName": "facebook",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.facebook"
+    }
+  }
+}
