@@ -137,7 +137,7 @@ export interface SharedImage extends Struct.ComponentSchema {
   };
   attributes: {
     alt: Schema.Attribute.String;
-    src: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    src: Schema.Attribute.String;
   };
 }
 

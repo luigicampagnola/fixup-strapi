@@ -31,7 +31,10 @@
         "shared.hero",
         "shared.nav-bar",
         "shared.google-rate",
-        "shared.card-container"
+        "shared.image",
+        "shared.cards",
+        "shared.card-container",
+        "shared.link"
       ]
     }
   }

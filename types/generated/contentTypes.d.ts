@@ -564,7 +564,10 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'shared.hero',
         'shared.nav-bar',
         'shared.google-rate',
+        'shared.image',
+        'shared.cards',
         'shared.card-container',
+        'shared.link',
       ]
     >;
     publishedAt: Schema.Attribute.DateTime;
