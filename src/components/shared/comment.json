@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_comments",
+  "info": {
+    "displayName": "comment"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "text"
+    },
+    "rate": {
+      "type": "integer"
+    }
+  }
+}

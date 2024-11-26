@@ -29,7 +29,9 @@
         "shared.quote",
         "shared.media",
         "shared.hero",
-        "shared.nav-bar"
+        "shared.nav-bar",
+        "shared.google-rate",
+        "shared.card-container"
       ]
     }
   }

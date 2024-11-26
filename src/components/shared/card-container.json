@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_card_containers",
+  "info": {
+    "displayName": "CardContainer",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "cards": {
+      "displayName": "cards",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.cards"
+    }
+  }
+}

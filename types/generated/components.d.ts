@@ -1,5 +1,34 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedCardContainer extends Struct.ComponentSchema {
+  collectionName: 'components_shared_card_containers';
+  info: {
+    description: '';
+    displayName: 'CardContainer';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'shared.cards', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedCards extends Struct.ComponentSchema {
+  collectionName: 'components_shared_cards';
+  info: {
+    description: '';
+    displayName: 'cards';
+  };
+  attributes: {
+    image: Schema.Attribute.Component<'shared.image', false>;
+    link: Schema.Attribute.Component<'shared.link', false>;
+    name: Schema.Attribute.String;
+    options: Schema.Attribute.Component<'shared.options', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedCities extends Struct.ComponentSchema {
   collectionName: 'components_shared_cities';
   info: {
@@ -8,6 +37,19 @@ export interface SharedCities extends Struct.ComponentSchema {
   attributes: {
     cities: Schema.Attribute.String;
     url: Schema.Attribute.String;
+  };
+}
+
+export interface SharedComment extends Struct.ComponentSchema {
+  collectionName: 'components_shared_comments';
+  info: {
+    displayName: 'comment';
+  };
+  attributes: {
+    comment: Schema.Attribute.Text;
+    date: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    rate: Schema.Attribute.Integer;
   };
 }
 
@@ -61,6 +103,21 @@ export interface SharedFinancing extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedGoogleRate extends Struct.ComponentSchema {
+  collectionName: 'components_shared_google_rates';
+  info: {
+    displayName: 'GoogleRate';
+  };
+  attributes: {
+    comments: Schema.Attribute.Component<'shared.comment', true>;
+    googleLogo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    label: Schema.Attribute.String;
+    subLabel: Schema.Attribute.String;
+  };
+}
+
 export interface SharedHero extends Struct.ComponentSchema {
   collectionName: 'components_shared_heroes';
   info: {
@@ -69,6 +126,29 @@ export interface SharedHero extends Struct.ComponentSchema {
   };
   attributes: {
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedImage extends Struct.ComponentSchema {
+  collectionName: 'components_shared_images';
+  info: {
+    description: '';
+    displayName: 'image';
+  };
+  attributes: {
+    alt: Schema.Attribute.String;
+    src: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface SharedLink extends Struct.ComponentSchema {
+  collectionName: 'components_shared_links';
+  info: {
+    displayName: 'link';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    url: Schema.Attribute.String;
   };
 }
 
@@ -112,6 +192,16 @@ export interface SharedNavBar extends Struct.ComponentSchema {
       true
     >;
     projects: Schema.Attribute.Component<'shared.financing', false>;
+  };
+}
+
+export interface SharedOptions extends Struct.ComponentSchema {
+  collectionName: 'components_shared_options';
+  info: {
+    displayName: 'options';
+  };
+  attributes: {
+    option: Schema.Attribute.String;
   };
 }
 
@@ -203,15 +293,22 @@ export interface SharedTopBar extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.card-container': SharedCardContainer;
+      'shared.cards': SharedCards;
       'shared.cities': SharedCities;
+      'shared.comment': SharedComment;
       'shared.counties': SharedCounties;
       'shared.email': SharedEmail;
       'shared.facebook': SharedFacebook;
       'shared.financing': SharedFinancing;
+      'shared.google-rate': SharedGoogleRate;
       'shared.hero': SharedHero;
+      'shared.image': SharedImage;
+      'shared.link': SharedLink;
       'shared.locations': SharedLocations;
       'shared.media': SharedMedia;
       'shared.nav-bar': SharedNavBar;
+      'shared.options': SharedOptions;
       'shared.phone': SharedPhone;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
