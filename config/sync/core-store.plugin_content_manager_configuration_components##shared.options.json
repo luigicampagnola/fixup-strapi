@@ -1,0 +1,57 @@
+{
+  "key": "plugin_content_manager_configuration_components::shared.options",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "option",
+      "defaultSortBy": "option",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "option": {
+        "edit": {
+          "label": "option",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "option",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "option"
+      ],
+      "edit": [
+        [
+          {
+            "name": "option",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "shared.options",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

@@ -1,0 +1,179 @@
+{
+  "key": "plugin_content_manager_configuration_components::shared.nav-bar",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "id",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "logo": {
+        "edit": {
+          "label": "logo",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "logo",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "locations": {
+        "edit": {
+          "label": "locations",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "locations",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "financing": {
+        "edit": {
+          "label": "financing",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "financing",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "projects": {
+        "edit": {
+          "label": "projects",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "projects",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "aboutUs": {
+        "edit": {
+          "label": "aboutUs",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "aboutUs",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "blog": {
+        "edit": {
+          "label": "blog",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "blog",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "freeEstimates": {
+        "edit": {
+          "label": "freeEstimates",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "freeEstimates",
+          "searchable": false,
+          "sortable": false
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "logo",
+        "locations",
+        "financing"
+      ],
+      "edit": [
+        [
+          {
+            "name": "logo",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "locations",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "financing",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "projects",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "aboutUs",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "blog",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "freeEstimates",
+            "size": 12
+          }
+        ]
+      ]
+    },
+    "uid": "shared.nav-bar",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

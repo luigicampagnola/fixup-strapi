@@ -1,0 +1,76 @@
+{
+  "key": "plugin_content_manager_configuration_components::shared.cities",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "cities",
+      "defaultSortBy": "cities",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "cities": {
+        "edit": {
+          "label": "cities",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "cities",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "url": {
+        "edit": {
+          "label": "url",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "url",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "cities",
+        "url"
+      ],
+      "edit": [
+        [
+          {
+            "name": "cities",
+            "size": 6
+          },
+          {
+            "name": "url",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "shared.cities",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}
