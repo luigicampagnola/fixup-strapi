@@ -1,11 +1,15 @@
 {
   "collectionName": "components_shared_options",
   "info": {
-    "displayName": "options"
+    "displayName": "options",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "option": {
+    "label": {
+      "type": "string"
+    },
+    "description": {
       "type": "string"
     }
   }

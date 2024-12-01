@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_shared_links_sections",
+  "info": {
+    "displayName": "LinksSection",
+    "icon": "earth",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link-list"
+    },
+    "social": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_contact_sections",
+  "info": {
+    "displayName": "ContactSection",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

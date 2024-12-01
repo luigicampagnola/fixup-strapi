@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_link_lists",
+  "info": {
+    "displayName": "LinkList",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "Links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    }
+  }
+}
