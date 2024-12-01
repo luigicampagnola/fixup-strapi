@@ -22,7 +22,6 @@
       "component": "shared.text-list"
     },
     "button": {
-      "displayName": "ScrollTo",
       "type": "component",
       "repeatable": false,
       "component": "shared.scroll-to"

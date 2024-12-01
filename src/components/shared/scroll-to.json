@@ -2,8 +2,16 @@
   "collectionName": "components_shared_scroll_tos",
   "info": {
     "displayName": "ScrollTo",
-    "icon": "arrowDown"
+    "icon": "arrowDown",
+    "description": ""
   },
   "options": {},
-  "attributes": {}
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "element": {
+      "type": "string"
+    }
+  }
 }

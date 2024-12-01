@@ -23,7 +23,7 @@ export interface SharedCards extends Struct.ComponentSchema {
     image: Schema.Attribute.Component<'shared.image', false>;
     link: Schema.Attribute.Component<'shared.link', false>;
     name: Schema.Attribute.String;
-    options: Schema.Attribute.Component<'shared.options', true>;
+    options: Schema.Attribute.Component<'shared.text-list', true>;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
@@ -150,7 +150,7 @@ export interface SharedImage extends Struct.ComponentSchema {
   };
   attributes: {
     alt: Schema.Attribute.String;
-    src: Schema.Attribute.String;
+    src: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -315,10 +315,14 @@ export interface SharedRichText extends Struct.ComponentSchema {
 export interface SharedScrollTo extends Struct.ComponentSchema {
   collectionName: 'components_shared_scroll_tos';
   info: {
+    description: '';
     displayName: 'ScrollTo';
     icon: 'arrowDown';
   };
-  attributes: {};
+  attributes: {
+    element: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+  };
 }
 
 export interface SharedSeo extends Struct.ComponentSchema {
