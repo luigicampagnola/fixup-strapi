@@ -1,7 +1,8 @@
 {
-  "collectionName": "components_shared_options",
+  "collectionName": "components_shared_scroll_tos",
   "info": {
-    "displayName": "options",
+    "displayName": "ScrollTo",
+    "icon": "arrowDown",
     "description": ""
   },
   "options": {},
@@ -9,7 +10,7 @@
     "label": {
       "type": "string"
     },
-    "description": {
+    "element": {
       "type": "string"
     }
   }

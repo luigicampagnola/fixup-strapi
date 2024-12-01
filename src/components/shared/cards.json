@@ -28,10 +28,9 @@
       "component": "shared.image"
     },
     "options": {
-      "displayName": "options",
       "type": "component",
       "repeatable": true,
-      "component": "shared.options"
+      "component": "shared.text-list"
     }
   }
 }

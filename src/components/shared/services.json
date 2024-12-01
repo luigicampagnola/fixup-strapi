@@ -1,8 +1,25 @@
 {
   "collectionName": "components_shared_services",
   "info": {
-    "displayName": "services"
+    "displayName": "Services"
   },
   "options": {},
-  "attributes": {}
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.cards"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    }
+  }
 }

@@ -23,7 +23,7 @@ export interface SharedCards extends Struct.ComponentSchema {
     image: Schema.Attribute.Component<'shared.image', false>;
     link: Schema.Attribute.Component<'shared.link', false>;
     name: Schema.Attribute.String;
-    options: Schema.Attribute.Component<'shared.options', true>;
+    options: Schema.Attribute.Component<'shared.text-list', true>;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
@@ -50,6 +50,19 @@ export interface SharedComment extends Struct.ComponentSchema {
     date: Schema.Attribute.String;
     name: Schema.Attribute.String;
     rate: Schema.Attribute.Integer;
+  };
+}
+
+export interface SharedContactSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_contact_sections';
+  info: {
+    description: '';
+    displayName: 'ContactSection';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -137,7 +150,7 @@ export interface SharedImage extends Struct.ComponentSchema {
   };
   attributes: {
     alt: Schema.Attribute.String;
-    src: Schema.Attribute.String;
+    src: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -149,6 +162,32 @@ export interface SharedLink extends Struct.ComponentSchema {
   attributes: {
     label: Schema.Attribute.String;
     url: Schema.Attribute.String;
+  };
+}
+
+export interface SharedLinkList extends Struct.ComponentSchema {
+  collectionName: 'components_shared_link_lists';
+  info: {
+    displayName: 'LinkList';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Links: Schema.Attribute.Component<'shared.link', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedLinksSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_links_sections';
+  info: {
+    description: '';
+    displayName: 'LinksSection';
+    icon: 'earth';
+  };
+  attributes: {
+    links: Schema.Attribute.Component<'shared.link-list', true>;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    social: Schema.Attribute.Component<'shared.link', true>;
   };
 }
 
@@ -195,13 +234,45 @@ export interface SharedNavBar extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedOptionSection2 extends Struct.ComponentSchema {
+  collectionName: 'components_shared_option_section2s';
+  info: {
+    description: '';
+    displayName: 'OptionsSection2';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    options: Schema.Attribute.Component<'shared.options', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedOptions extends Struct.ComponentSchema {
   collectionName: 'components_shared_options';
   info: {
+    description: '';
     displayName: 'options';
   };
   attributes: {
-    option: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface SharedOptionsSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_options_sections';
+  info: {
+    description: '';
+    displayName: ' OptionsSection';
+  };
+  attributes: {
+    descriptionWithLink: Schema.Attribute.Text;
+    middleDescription: Schema.Attribute.Text;
+    options: Schema.Attribute.Component<'shared.options', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    topDescription: Schema.Attribute.Text;
   };
 }
 
@@ -241,6 +312,19 @@ export interface SharedRichText extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedScrollTo extends Struct.ComponentSchema {
+  collectionName: 'components_shared_scroll_tos';
+  info: {
+    description: '';
+    displayName: 'ScrollTo';
+    icon: 'arrowDown';
+  };
+  attributes: {
+    element: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+  };
+}
+
 export interface SharedSeo extends Struct.ComponentSchema {
   collectionName: 'components_shared_seos';
   info: {
@@ -256,12 +340,27 @@ export interface SharedSeo extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedServiceModule extends Struct.ComponentSchema {
+  collectionName: 'components_shared_service_modules';
+  info: {
+    displayName: 'serviceModule';
+  };
+  attributes: {
+    top: Schema.Attribute.Component<'shared.top-section', true>;
+  };
+}
+
 export interface SharedServices extends Struct.ComponentSchema {
   collectionName: 'components_shared_services';
   info: {
-    displayName: 'services';
+    displayName: 'Services';
   };
-  attributes: {};
+  attributes: {
+    button: Schema.Attribute.Component<'shared.link', false>;
+    cards: Schema.Attribute.Component<'shared.cards', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
 }
 
 export interface SharedSlider extends Struct.ComponentSchema {
@@ -273,6 +372,17 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
   attributes: {
     files: Schema.Attribute.Media<'images', true>;
+  };
+}
+
+export interface SharedTextList extends Struct.ComponentSchema {
+  collectionName: 'components_shared_text_lists';
+  info: {
+    displayName: 'TextList';
+    icon: 'bulletList';
+  };
+  attributes: {
+    values: Schema.Attribute.String;
   };
 }
 
@@ -290,6 +400,21 @@ export interface SharedTopBar extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTopSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_top_sections';
+  info: {
+    description: '';
+    displayName: 'TopSection';
+  };
+  attributes: {
+    benefits: Schema.Attribute.Component<'shared.text-list', true>;
+    button: Schema.Attribute.Component<'shared.scroll-to', false>;
+    description: Schema.Attribute.Text;
+    secondTitle: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -297,6 +422,7 @@ declare module '@strapi/strapi' {
       'shared.cards': SharedCards;
       'shared.cities': SharedCities;
       'shared.comment': SharedComment;
+      'shared.contact-section': SharedContactSection;
       'shared.counties': SharedCounties;
       'shared.email': SharedEmail;
       'shared.facebook': SharedFacebook;
@@ -305,17 +431,25 @@ declare module '@strapi/strapi' {
       'shared.hero': SharedHero;
       'shared.image': SharedImage;
       'shared.link': SharedLink;
+      'shared.link-list': SharedLinkList;
+      'shared.links-section': SharedLinksSection;
       'shared.locations': SharedLocations;
       'shared.media': SharedMedia;
       'shared.nav-bar': SharedNavBar;
+      'shared.option-section2': SharedOptionSection2;
       'shared.options': SharedOptions;
+      'shared.options-section': SharedOptionsSection;
       'shared.phone': SharedPhone;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
+      'shared.scroll-to': SharedScrollTo;
       'shared.seo': SharedSeo;
+      'shared.service-module': SharedServiceModule;
       'shared.services': SharedServices;
       'shared.slider': SharedSlider;
+      'shared.text-list': SharedTextList;
       'shared.top-bar': SharedTopBar;
+      'shared.top-section': SharedTopSection;
     }
   }
 }

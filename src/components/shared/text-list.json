@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_text_lists",
+  "info": {
+    "displayName": "TextList",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "values": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_top_sections",
+  "info": {
+    "displayName": "TopSection",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "secondTitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "benefits": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.text-list"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.scroll-to"
+    }
+  }
+}

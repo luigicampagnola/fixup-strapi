@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_service_modules",
+  "info": {
+    "displayName": "serviceModule"
+  },
+  "options": {},
+  "attributes": {
+    "top": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.top-section"
+    }
+  }
+}
