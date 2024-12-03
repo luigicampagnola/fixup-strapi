@@ -320,7 +320,7 @@ export interface SharedScrollTo extends Struct.ComponentSchema {
     icon: 'arrowDown';
   };
   attributes: {
-    element: Schema.Attribute.String;
+    cssSelector: Schema.Attribute.String;
     label: Schema.Attribute.String;
   };
 }
