@@ -23,7 +23,12 @@ export default factories.createCoreController(
               cards: {
                 populate: {
                   link: true, // Asegúrate de incluir `link` dentro de `cards`
-                  image: true, // Incluye el componente `image`
+                  image: {
+                    populate: {
+                      alt: true,
+                      src: true
+                    }
+                  }, // Incluye el componente `image`
                   options: true,
                 },
               },
