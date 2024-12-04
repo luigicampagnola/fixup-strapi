@@ -603,12 +603,12 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     modules: Schema.Attribute.DynamicZone<
       [
         'shared.top-section',
-        'shared.google-rate',
         'shared.services',
         'shared.options-section',
         'shared.option-section2',
         'shared.contact-section',
         'shared.links-section',
+        'shared.information-section',
       ]
     >;
     publishedAt: Schema.Attribute.DateTime;
