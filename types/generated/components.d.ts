@@ -154,6 +154,23 @@ export interface SharedImage extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedInformationSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_information_sections';
+  info: {
+    description: '';
+    displayName: 'InformationSection';
+    icon: 'file';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'shared.scroll-to', false>;
+    description: Schema.Attribute.RichText;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    rates: Schema.Attribute.Component<'shared.google-rate', false>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_links';
   info: {
@@ -411,7 +428,7 @@ export interface SharedTopSection extends Struct.ComponentSchema {
     benefits: Schema.Attribute.Component<'shared.text-list', true>;
     button: Schema.Attribute.Component<'shared.scroll-to', false>;
     description: Schema.Attribute.Text;
-    secondTitle: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -431,6 +448,7 @@ declare module '@strapi/strapi' {
       'shared.google-rate': SharedGoogleRate;
       'shared.hero': SharedHero;
       'shared.image': SharedImage;
+      'shared.information-section': SharedInformationSection;
       'shared.link': SharedLink;
       'shared.link-list': SharedLinkList;
       'shared.links-section': SharedLinksSection;

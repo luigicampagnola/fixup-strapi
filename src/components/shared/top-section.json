@@ -10,7 +10,7 @@
       "type": "string",
       "required": true
     },
-    "secondTitle": {
+    "subtitle": {
       "type": "string"
     },
     "description": {

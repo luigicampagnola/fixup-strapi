@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_shared_information_sections",
+  "info": {
+    "displayName": "InformationSection",
+    "icon": "file",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "rates": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.google-rate"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.scroll-to"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

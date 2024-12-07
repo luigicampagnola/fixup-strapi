@@ -24,17 +24,12 @@
       "components": [
         "shared.top-bar",
         "shared.seo",
-        "shared.slider",
-        "shared.rich-text",
-        "shared.quote",
-        "shared.media",
-        "shared.hero",
         "shared.nav-bar",
-        "shared.google-rate",
-        "shared.image",
-        "shared.cards",
-        "shared.card-container",
-        "shared.link"
+        "shared.options-section",
+        "shared.option-section2",
+        "shared.contact-section",
+        "shared.information-section",
+        "shared.top-section"
       ]
     }
   }
