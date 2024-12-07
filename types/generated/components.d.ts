@@ -428,7 +428,7 @@ export interface SharedTopSection extends Struct.ComponentSchema {
     benefits: Schema.Attribute.Component<'shared.text-list', true>;
     button: Schema.Attribute.Component<'shared.scroll-to', false>;
     description: Schema.Attribute.Text;
-    secondTitle: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
