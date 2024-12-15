@@ -15,7 +15,12 @@ export default factories.createCoreController(
               cards: {
                 populate: {
                   link: true,
-                  image: true,
+                  image: {
+                    populate: {
+                      alt: true,
+                      src: true,
+                    }
+                  },
                   options: true,
                 },
               },
