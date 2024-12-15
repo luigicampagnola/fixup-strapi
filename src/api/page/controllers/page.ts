@@ -12,6 +12,17 @@ export default factories.createCoreController(
         populate: {
           modules: {
             populate: {
+              button: {
+                populate: {
+                  label: true,
+                  cssSelector: true,
+                }
+              },
+              benefits: {
+                populate: {
+                  values: true,
+                }
+              },
               cards: {
                 populate: {
                   link: true,

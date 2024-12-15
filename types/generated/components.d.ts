@@ -369,6 +369,7 @@ export interface SharedScrollTo extends Struct.ComponentSchema {
   attributes: {
     cssSelector: Schema.Attribute.String;
     label: Schema.Attribute.String;
+    position: Schema.Attribute.String;
   };
 }
 

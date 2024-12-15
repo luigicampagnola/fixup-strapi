@@ -12,6 +12,9 @@
     },
     "cssSelector": {
       "type": "string"
+    },
+    "position": {
+      "type": "string"
     }
   }
 }
