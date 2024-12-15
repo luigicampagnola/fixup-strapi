@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_buttonbars",
+  "info": {
+    "displayName": "ButtonBar",
+    "icon": "arrowDown",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "privacypolicy": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    },
+    "copyright": {
+      "type": "string"
+    },
+    "createdby": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    }
+  }
+}
