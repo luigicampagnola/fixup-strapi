@@ -563,10 +563,14 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'shared.contact-section',
         'shared.information-section',
         'shared.top-section',
+        'shared.card-container',
+        'shared.services',
       ]
     >;
     publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID<'title'>;
+    slug: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

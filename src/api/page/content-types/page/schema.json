@@ -16,8 +16,10 @@
       "type": "string"
     },
     "slug": {
-      "type": "uid",
-      "targetField": "title"
+      "type": "string",
+      "regex": "^[A-Za-z0-9-_.~/]*$",
+      "required": true,
+      "unique": true
     },
     "modules": {
       "type": "dynamiczone",
@@ -29,7 +31,9 @@
         "shared.option-section2",
         "shared.contact-section",
         "shared.information-section",
-        "shared.top-section"
+        "shared.top-section",
+        "shared.card-container",
+        "shared.services"
       ]
     }
   }
