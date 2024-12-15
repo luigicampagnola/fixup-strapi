@@ -33,7 +33,10 @@
         "shared.information-section",
         "shared.top-section",
         "shared.card-container",
-        "shared.services"
+        "shared.services",
+        "shared.information-section2",
+        "shared.links-section",
+        "shared.buttonbar"
       ]
     }
   }

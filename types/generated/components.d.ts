@@ -1,5 +1,19 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedButtonbar extends Struct.ComponentSchema {
+  collectionName: 'components_shared_buttonbars';
+  info: {
+    description: '';
+    displayName: 'ButtonBar';
+    icon: 'arrowDown';
+  };
+  attributes: {
+    copyright: Schema.Attribute.String;
+    createdby: Schema.Attribute.Component<'shared.link', true>;
+    privacypolicy: Schema.Attribute.Component<'shared.link', false>;
+  };
+}
+
 export interface SharedCardContainer extends Struct.ComponentSchema {
   collectionName: 'components_shared_card_containers';
   info: {
@@ -166,6 +180,21 @@ export interface SharedInformationSection extends Struct.ComponentSchema {
     description: Schema.Attribute.RichText;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     rates: Schema.Attribute.Component<'shared.google-rate', false>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedInformationSection2 extends Struct.ComponentSchema {
+  collectionName: 'components_shared_information_section2s';
+  info: {
+    description: '';
+    displayName: 'InformationSection2';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'shared.link', false>;
+    description: Schema.Attribute.RichText;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
@@ -427,7 +456,7 @@ export interface SharedTopSection extends Struct.ComponentSchema {
   attributes: {
     benefits: Schema.Attribute.Component<'shared.text-list', true>;
     button: Schema.Attribute.Component<'shared.scroll-to', false>;
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.RichText;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -436,6 +465,7 @@ export interface SharedTopSection extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.buttonbar': SharedButtonbar;
       'shared.card-container': SharedCardContainer;
       'shared.cards': SharedCards;
       'shared.cities': SharedCities;
@@ -449,6 +479,7 @@ declare module '@strapi/strapi' {
       'shared.hero': SharedHero;
       'shared.image': SharedImage;
       'shared.information-section': SharedInformationSection;
+      'shared.information-section2': SharedInformationSection2;
       'shared.link': SharedLink;
       'shared.link-list': SharedLinkList;
       'shared.links-section': SharedLinksSection;

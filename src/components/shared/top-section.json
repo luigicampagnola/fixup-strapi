@@ -13,9 +13,6 @@
     "subtitle": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
     "benefits": {
       "type": "component",
       "repeatable": true,
@@ -25,6 +22,9 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.scroll-to"
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }
