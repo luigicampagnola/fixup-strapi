@@ -21,6 +21,7 @@ export default factories.createCoreController(
               benefits: {
                 populate: {
                   values: true,
+                  position: true,
                 }
               },
               cards: {

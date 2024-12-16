@@ -2,11 +2,15 @@
   "collectionName": "components_shared_text_lists",
   "info": {
     "displayName": "TextList",
-    "icon": "bulletList"
+    "icon": "bulletList",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "values": {
+      "type": "string"
+    },
+    "position": {
       "type": "string"
     }
   }
