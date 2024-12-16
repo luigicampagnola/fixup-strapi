@@ -426,10 +426,12 @@ export interface SharedSlider extends Struct.ComponentSchema {
 export interface SharedTextList extends Struct.ComponentSchema {
   collectionName: 'components_shared_text_lists';
   info: {
+    description: '';
     displayName: 'TextList';
     icon: 'bulletList';
   };
   attributes: {
+    position: Schema.Attribute.String;
     values: Schema.Attribute.String;
   };
 }
@@ -460,6 +462,7 @@ export interface SharedTopSection extends Struct.ComponentSchema {
     description: Schema.Attribute.RichText;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String & Schema.Attribute.Required;
+    titlePosition: Schema.Attribute.String;
   };
 }
 
