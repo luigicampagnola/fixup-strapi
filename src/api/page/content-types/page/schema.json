@@ -36,7 +36,8 @@
         "shared.services",
         "shared.information-section2",
         "shared.links-section",
-        "shared.buttonbar"
+        "shared.buttonbar",
+        "shared.background-image"
       ]
     }
   }
