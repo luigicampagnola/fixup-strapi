@@ -80,6 +80,25 @@ export interface SharedComment extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedContactForm extends Struct.ComponentSchema {
+  collectionName: 'components_shared_contact_forms';
+  info: {
+    description: '';
+    displayName: 'ContactForm';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'shared.link', false>;
+    captcha: Schema.Attribute.Component<'shared.field-data', false>;
+    email: Schema.Attribute.Component<'shared.field-data', false>;
+    name: Schema.Attribute.Component<'shared.field-data', false>;
+    phone: Schema.Attribute.Component<'shared.field-data', false>;
+    sponsors: Schema.Attribute.Component<'shared.slider', false>;
+    street: Schema.Attribute.Component<'shared.field-data', false>;
+    title: Schema.Attribute.String;
+    warning: Schema.Attribute.String;
+  };
+}
+
 export interface SharedContactSection extends Struct.ComponentSchema {
   collectionName: 'components_shared_contact_sections';
   info: {
@@ -130,6 +149,21 @@ export interface SharedFacebook extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedFieldData extends Struct.ComponentSchema {
+  collectionName: 'components_shared_field_data';
+  info: {
+    description: '';
+    displayName: 'FieldData';
+  };
+  attributes: {
+    formatWarning: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    placeholder: Schema.Attribute.String;
+    required: Schema.Attribute.Boolean;
+    warning: Schema.Attribute.String;
+  };
+}
+
 export interface SharedFinancing extends Struct.ComponentSchema {
   collectionName: 'components_shared_financings';
   info: {
@@ -140,6 +174,23 @@ export interface SharedFinancing extends Struct.ComponentSchema {
     href: Schema.Attribute.String;
     label: Schema.Attribute.String;
     target: Schema.Attribute.String;
+  };
+}
+
+export interface SharedFormSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_form_sections';
+  info: {
+    displayName: 'FormSection';
+    icon: 'brush';
+  };
+  attributes: {
+    address: Schema.Attribute.String;
+    contactForm: Schema.Attribute.Component<'shared.contact-form', false>;
+    description: Schema.Attribute.RichText;
+    email: Schema.Attribute.String;
+    phone: Schema.Attribute.Component<'shared.phone', false>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -492,11 +543,14 @@ declare module '@strapi/strapi' {
       'shared.cards': SharedCards;
       'shared.cities': SharedCities;
       'shared.comment': SharedComment;
+      'shared.contact-form': SharedContactForm;
       'shared.contact-section': SharedContactSection;
       'shared.counties': SharedCounties;
       'shared.email': SharedEmail;
       'shared.facebook': SharedFacebook;
+      'shared.field-data': SharedFieldData;
       'shared.financing': SharedFinancing;
+      'shared.form-section': SharedFormSection;
       'shared.google-rate': SharedGoogleRate;
       'shared.hero': SharedHero;
       'shared.image': SharedImage;

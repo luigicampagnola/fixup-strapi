@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_field_data",
+  "info": {
+    "displayName": "FieldData",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "required": {
+      "type": "boolean"
+    },
+    "warning": {
+      "type": "string"
+    },
+    "formatWarning": {
+      "type": "string"
+    }
+  }
+}

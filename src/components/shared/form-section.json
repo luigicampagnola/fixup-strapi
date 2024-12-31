@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_shared_form_sections",
+  "info": {
+    "displayName": "FormSection",
+    "icon": "brush"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "phone": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.phone"
+    },
+    "email": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "contactForm": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.contact-form"
+    }
+  }
+}

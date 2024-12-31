@@ -1,0 +1,52 @@
+{
+  "collectionName": "components_shared_contact_forms",
+  "info": {
+    "displayName": "ContactForm",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "warning": {
+      "type": "string"
+    },
+    "name": {
+      "displayName": "FieldData",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.field-data"
+    },
+    "phone": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.field-data"
+    },
+    "email": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.field-data"
+    },
+    "street": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.field-data"
+    },
+    "captcha": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.field-data"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    },
+    "sponsors": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.slider"
+    }
+  }
+}
