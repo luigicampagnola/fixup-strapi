@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_shared_options_section3s",
+  "info": {
+    "displayName": "OptionsSection3",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "countyOptions": {
+      "displayName": "CountyOption",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.county-option"
+    },
+    "bottomDescription": {
+      "type": "text"
+    },
+    "subtitle": {
+      "type": "string"
+    }
+  }
+}

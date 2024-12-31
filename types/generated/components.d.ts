@@ -124,6 +124,19 @@ export interface SharedCounties extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedCountyOption extends Struct.ComponentSchema {
+  collectionName: 'components_shared_county_options';
+  info: {
+    displayName: 'CountyOption';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    link: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedEmail extends Struct.ComponentSchema {
   collectionName: 'components_shared_emails';
   info: {
@@ -400,6 +413,22 @@ export interface SharedOptionsSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedOptionsSection3 extends Struct.ComponentSchema {
+  collectionName: 'components_shared_options_section3s';
+  info: {
+    description: '';
+    displayName: 'OptionsSection3';
+    icon: 'apps';
+  };
+  attributes: {
+    bottomDescription: Schema.Attribute.Text;
+    countyOptions: Schema.Attribute.Component<'shared.county-option', true>;
+    description: Schema.Attribute.RichText;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedPhone extends Struct.ComponentSchema {
   collectionName: 'components_shared_phones';
   info: {
@@ -559,6 +588,7 @@ declare module '@strapi/strapi' {
       'shared.contact-form': SharedContactForm;
       'shared.contact-section': SharedContactSection;
       'shared.counties': SharedCounties;
+      'shared.county-option': SharedCountyOption;
       'shared.email': SharedEmail;
       'shared.facebook': SharedFacebook;
       'shared.field-data': SharedFieldData;
@@ -579,6 +609,7 @@ declare module '@strapi/strapi' {
       'shared.option-section2': SharedOptionSection2;
       'shared.options': SharedOptions;
       'shared.options-section': SharedOptionsSection;
+      'shared.options-section3': SharedOptionsSection3;
       'shared.phone': SharedPhone;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

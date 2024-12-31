@@ -30,6 +30,14 @@ export default factories.createCoreController(
                   href: true
                 }
               },
+              countyOptions: {
+                populate: {
+                  image: true,
+                  title: true,
+                  description: true,
+                  link: true
+                }
+              },
               contactForm: {
                 populate: {
                   title: true,
