@@ -1,5 +1,18 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedBackgroundImage extends Struct.ComponentSchema {
+  collectionName: 'components_shared_background_images';
+  info: {
+    displayName: 'backgroundImage';
+  };
+  attributes: {
+    alt: Schema.Attribute.String;
+    backgroundImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+  };
+}
+
 export interface SharedButtonbar extends Struct.ComponentSchema {
   collectionName: 'components_shared_buttonbars';
   info: {
@@ -457,6 +470,10 @@ export interface SharedTopSection extends Struct.ComponentSchema {
     displayName: 'TopSection';
   };
   attributes: {
+    backgroundImage: Schema.Attribute.Component<
+      'shared.background-image',
+      false
+    >;
     benefits: Schema.Attribute.Component<'shared.text-list', true>;
     button: Schema.Attribute.Component<'shared.scroll-to', false>;
     description: Schema.Attribute.RichText;
@@ -469,6 +486,7 @@ export interface SharedTopSection extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.background-image': SharedBackgroundImage;
       'shared.buttonbar': SharedButtonbar;
       'shared.card-container': SharedCardContainer;
       'shared.cards': SharedCards;

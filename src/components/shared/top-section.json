@@ -28,6 +28,12 @@
     },
     "titlePosition": {
       "type": "string"
+    },
+    "backgroundImage": {
+      "displayName": "backgroundImage",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.background-image"
     }
   }
 }
