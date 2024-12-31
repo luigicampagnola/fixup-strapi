@@ -24,6 +24,79 @@ export default factories.createCoreController(
                   position: true,
                 }
               },
+              phone: {
+                populate: {
+                  label: true,
+                  href: true
+                }
+              },
+              contactForm: {
+                populate: {
+                  title: true,
+                  warning: true,
+                  name: {
+                    populate: {
+                      label: true,
+                      type: true,
+                      placeholder: true,
+                      required: true,
+                      warning: true,
+                      formatWarning: true,
+                    }
+                  },
+                  phone: {
+                    populate: {
+                      label: true,
+                      type: true,
+                      placeholder: true,
+                      required: true,
+                      warning: true,
+                      formatWarning: true,
+                    }
+                  },
+                  email: {
+                    populate: {
+                      label: true,
+                      type: true,
+                      placeholder: true,
+                      required: true,
+                      warning: true,
+                      formatWarning: true,
+                    }
+                  },
+                  street: {
+                    populate: {
+                      label: true,
+                      type: true,
+                      placeholder: true,
+                      required: true,
+                      warning: true,
+                      formatWarning: true,
+                    }
+                  },
+                  captcha: {
+                    populate: {
+                      label: true,
+                      type: true,
+                      placeholder: true,
+                      required: true,
+                      warning: true,
+                      formatWarning: true,
+                    }
+                  },
+                  button: {
+                    populate: {
+                      label: true,
+                      url: true
+                    }
+                  },
+                  sponsors: {
+                    populate: {
+                      files: true
+                    }
+                  }
+                }
+              },
               cards: {
                 populate: {
                   link: true,
