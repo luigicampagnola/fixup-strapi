@@ -194,6 +194,19 @@ export interface SharedFormSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedFormSection2 extends Struct.ComponentSchema {
+  collectionName: 'components_shared_form_section2s';
+  info: {
+    displayName: 'FormSection2';
+    icon: 'brush';
+  };
+  attributes: {
+    contactForm: Schema.Attribute.Component<'shared.contact-form', false>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedGoogleRate extends Struct.ComponentSchema {
   collectionName: 'components_shared_google_rates';
   info: {
@@ -551,6 +564,7 @@ declare module '@strapi/strapi' {
       'shared.field-data': SharedFieldData;
       'shared.financing': SharedFinancing;
       'shared.form-section': SharedFormSection;
+      'shared.form-section2': SharedFormSection2;
       'shared.google-rate': SharedGoogleRate;
       'shared.hero': SharedHero;
       'shared.image': SharedImage;

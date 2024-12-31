@@ -38,7 +38,8 @@
         "shared.links-section",
         "shared.buttonbar",
         "shared.background-image",
-        "shared.form-section"
+        "shared.form-section",
+        "shared.form-section2"
       ]
     }
   }

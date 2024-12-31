@@ -570,6 +570,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'shared.buttonbar',
         'shared.background-image',
         'shared.form-section',
+        'shared.form-section2',
       ]
     >;
     publishedAt: Schema.Attribute.DateTime;

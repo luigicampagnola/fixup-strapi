@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_form_section2s",
+  "info": {
+    "displayName": "FormSection2",
+    "icon": "brush"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "contactForm": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.contact-form"
+    }
+  }
+}
