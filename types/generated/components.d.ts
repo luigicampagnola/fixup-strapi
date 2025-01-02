@@ -201,6 +201,21 @@ export interface SharedFinancing extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedFinancingProgramSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_financing_program_sections';
+  info: {
+    description: '';
+    displayName: 'FinancingProgramSection';
+    icon: 'bulletList';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'shared.scroll-to', false>;
+    cards: Schema.Attribute.Component<'shared.cards', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedFormSection extends Struct.ComponentSchema {
   collectionName: 'components_shared_form_sections';
   info: {
@@ -644,6 +659,7 @@ declare module '@strapi/strapi' {
       'shared.facebook': SharedFacebook;
       'shared.field-data': SharedFieldData;
       'shared.financing': SharedFinancing;
+      'shared.financing-program-section': SharedFinancingProgramSection;
       'shared.form-section': SharedFormSection;
       'shared.form-section2': SharedFormSection2;
       'shared.google-rate': SharedGoogleRate;
