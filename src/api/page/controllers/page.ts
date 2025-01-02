@@ -38,6 +38,19 @@ export default factories.createCoreController(
                   link: true
                 }
               },
+              image: {
+                populate:{
+                  url: true
+                }
+              },
+              rates: {
+                populate: {
+                  label: true,
+                  subLabel: true,
+                  googleLogo: true,
+                  comments: true
+                }
+              },
               contactForm: {
                 populate: {
                   title: true,
