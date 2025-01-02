@@ -112,6 +112,17 @@ export interface SharedContactSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedCoordinates extends Struct.ComponentSchema {
+  collectionName: 'components_shared_coordinates';
+  info: {
+    displayName: 'Coordinates';
+  };
+  attributes: {
+    lat: Schema.Attribute.Decimal;
+    lng: Schema.Attribute.Decimal;
+  };
+}
+
 export interface SharedCounties extends Struct.ComponentSchema {
   collectionName: 'components_shared_counties';
   info: {
@@ -327,6 +338,16 @@ export interface SharedLinksSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedList extends Struct.ComponentSchema {
+  collectionName: 'components_shared_lists';
+  info: {
+    displayName: 'List';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+  };
+}
+
 export interface SharedLocations extends Struct.ComponentSchema {
   collectionName: 'components_shared_locations';
   info: {
@@ -336,6 +357,35 @@ export interface SharedLocations extends Struct.ComponentSchema {
   attributes: {
     counties: Schema.Attribute.Component<'shared.counties', true>;
     label: Schema.Attribute.String;
+  };
+}
+
+export interface SharedMapData extends Struct.ComponentSchema {
+  collectionName: 'components_shared_map_data';
+  info: {
+    description: '';
+    displayName: 'MapData';
+  };
+  attributes: {
+    center: Schema.Attribute.Component<'shared.coordinates', false>;
+    label: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+    mapLocations: Schema.Attribute.Component<'shared.list', true>;
+    zoom: Schema.Attribute.Integer;
+  };
+}
+
+export interface SharedMapSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_map_sections';
+  info: {
+    displayName: 'MapSection';
+    icon: 'pinMap';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    mapsData: Schema.Attribute.Component<'shared.map-data', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -587,6 +637,7 @@ declare module '@strapi/strapi' {
       'shared.comment': SharedComment;
       'shared.contact-form': SharedContactForm;
       'shared.contact-section': SharedContactSection;
+      'shared.coordinates': SharedCoordinates;
       'shared.counties': SharedCounties;
       'shared.county-option': SharedCountyOption;
       'shared.email': SharedEmail;
@@ -603,7 +654,10 @@ declare module '@strapi/strapi' {
       'shared.link': SharedLink;
       'shared.link-list': SharedLinkList;
       'shared.links-section': SharedLinksSection;
+      'shared.list': SharedList;
       'shared.locations': SharedLocations;
+      'shared.map-data': SharedMapData;
+      'shared.map-section': SharedMapSection;
       'shared.media': SharedMedia;
       'shared.nav-bar': SharedNavBar;
       'shared.option-section2': SharedOptionSection2;

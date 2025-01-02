@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_map_data",
+  "info": {
+    "displayName": "MapData",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "mapLocations": {
+      "displayName": "List",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.list"
+    },
+    "zoom": {
+      "type": "integer"
+    },
+    "center": {
+      "displayName": "Coordinates",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.coordinates"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

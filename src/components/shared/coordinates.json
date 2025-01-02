@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_coordinates",
+  "info": {
+    "displayName": "Coordinates"
+  },
+  "options": {},
+  "attributes": {
+    "lat": {
+      "type": "decimal"
+    },
+    "lng": {
+      "type": "decimal"
+    }
+  }
+}

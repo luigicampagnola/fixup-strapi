@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_map_sections",
+  "info": {
+    "displayName": "MapSection",
+    "icon": "pinMap"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "mapsData": {
+      "displayName": "MapData",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.map-data"
+    }
+  }
+}
