@@ -40,7 +40,8 @@
         "shared.background-image",
         "shared.form-section",
         "shared.form-section2",
-        "shared.options-section3"
+        "shared.options-section3",
+        "shared.map-section"
       ]
     }
   }

@@ -105,6 +105,15 @@ export default factories.createCoreController(
                   }
                 }
               },
+              mapsData: {
+                populate: {
+                  label: true,
+                  mapLocations: true,
+                  zoom: true,
+                  center: true,
+                  link: true
+                }
+              },
               cards: {
                 populate: {
                   link: true,
