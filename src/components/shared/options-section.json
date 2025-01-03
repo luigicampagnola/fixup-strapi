@@ -20,11 +20,11 @@
       "repeatable": true,
       "component": "shared.options"
     },
-    "middleDescription": {
-      "type": "text"
-    },
     "descriptionWithLink": {
-      "type": "text"
+      "type": "richtext"
+    },
+    "middleDescription": {
+      "type": "richtext"
     }
   }
 }

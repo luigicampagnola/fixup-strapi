@@ -592,8 +592,8 @@ export interface SharedOptionsSection extends Struct.ComponentSchema {
     displayName: ' OptionsSection';
   };
   attributes: {
-    descriptionWithLink: Schema.Attribute.Text;
-    middleDescription: Schema.Attribute.Text;
+    descriptionWithLink: Schema.Attribute.RichText;
+    middleDescription: Schema.Attribute.RichText;
     options: Schema.Attribute.Component<'shared.options', true>;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
