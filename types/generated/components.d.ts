@@ -64,6 +64,32 @@ export interface SharedBlogSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedBlogSlugSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_blog_slug_sections';
+  info: {
+    displayName: 'BlogSlugSection';
+    icon: 'bulletList';
+  };
+  attributes: {
+    blogPopularPostSection: Schema.Attribute.Component<
+      'shared.blog-popular-posts-section',
+      false
+    >;
+    blogTableContents: Schema.Attribute.Component<
+      'shared.blog-table-contents',
+      false
+    >;
+    blogThemeSection: Schema.Attribute.Component<
+      'shared.blog-theme-section',
+      false
+    >;
+    blogTopSection: Schema.Attribute.Component<
+      'shared.blog-top-section',
+      false
+    >;
+  };
+}
+
 export interface SharedBlogTableContents extends Struct.ComponentSchema {
   collectionName: 'components_shared_blog_table_contents';
   info: {
@@ -838,6 +864,7 @@ declare module '@strapi/strapi' {
       'shared.blog-popular-posts': SharedBlogPopularPosts;
       'shared.blog-popular-posts-section': SharedBlogPopularPostsSection;
       'shared.blog-section': SharedBlogSection;
+      'shared.blog-slug-section': SharedBlogSlugSection;
       'shared.blog-table-contents': SharedBlogTableContents;
       'shared.blog-theme': SharedBlogTheme;
       'shared.blog-theme-section': SharedBlogThemeSection;
