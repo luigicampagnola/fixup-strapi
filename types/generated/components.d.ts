@@ -615,9 +615,14 @@ export interface SharedServiceModule extends Struct.ComponentSchema {
 export interface SharedServices extends Struct.ComponentSchema {
   collectionName: 'components_shared_services';
   info: {
+    description: '';
     displayName: 'Services';
   };
   attributes: {
+    backgroundImage: Schema.Attribute.Component<
+      'shared.background-image',
+      false
+    >;
     button: Schema.Attribute.Component<'shared.link', false>;
     cards: Schema.Attribute.Component<'shared.cards', true>;
     subtitle: Schema.Attribute.String;
