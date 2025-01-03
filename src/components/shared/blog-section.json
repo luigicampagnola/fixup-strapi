@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_blog_sections",
+  "info": {
+    "displayName": "BlogSection",
+    "icon": "information"
+  },
+  "options": {},
+  "attributes": {
+    "blogCards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.blog-card"
+    }
+  }
+}

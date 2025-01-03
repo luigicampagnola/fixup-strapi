@@ -124,6 +124,15 @@ export default factories.createCoreController(
                   },
                 },
               },
+              blogCards: {
+                populate: {
+                  title: true,
+                  date: true,
+                  description: true,
+                  image: true
+                }
+              },
+              slider: true,
               mapsData: {
                 populate: {
                   label: true,
