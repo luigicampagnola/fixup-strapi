@@ -176,6 +176,24 @@ export interface SharedCountyOption extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedCta extends Struct.ComponentSchema {
+  collectionName: 'components_shared_ctas';
+  info: {
+    description: '';
+    displayName: 'cta';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Component<
+      'shared.background-image',
+      true
+    >;
+    button: Schema.Attribute.Component<'shared.link', true>;
+    description: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedEmail extends Struct.ComponentSchema {
   collectionName: 'components_shared_emails';
   info: {
@@ -706,6 +724,7 @@ declare module '@strapi/strapi' {
       'shared.coordinates': SharedCoordinates;
       'shared.counties': SharedCounties;
       'shared.county-option': SharedCountyOption;
+      'shared.cta': SharedCta;
       'shared.email': SharedEmail;
       'shared.facebook': SharedFacebook;
       'shared.field-data': SharedFieldData;
