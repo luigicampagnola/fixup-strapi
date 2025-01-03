@@ -45,7 +45,11 @@
         "shared.financing-program-section",
         "shared.blog-section",
         "shared.images-section",
-        "shared.cta"
+        "shared.cta",
+        "shared.blog-top-section",
+        "shared.blog-theme",
+        "shared.blog-table-contents",
+        "shared.blog-popular-posts"
       ]
     }
   }

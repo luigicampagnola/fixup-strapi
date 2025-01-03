@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_blog_tips",
+  "info": {
+    "displayName": "BlogTips"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "cssSelector": {
+      "type": "string"
+    }
+  }
+}

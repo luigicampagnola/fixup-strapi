@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_scroll_to_labels",
+  "info": {
+    "displayName": "ScrollToLabel"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "cssSelector": {
+      "type": "string"
+    },
+    "subContent": {
+      "displayName": "SubScrollTo",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.sub-scroll-to"
+    }
+  }
+}

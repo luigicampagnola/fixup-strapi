@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_blog_popular_posts",
+  "info": {
+    "displayName": "BlogPopularPosts"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

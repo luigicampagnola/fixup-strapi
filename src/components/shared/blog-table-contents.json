@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_blog_table_contents",
+  "info": {
+    "displayName": "BlogTableContents"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "displayName": "ScrollToLabel",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.scroll-to-label"
+    }
+  }
+}
