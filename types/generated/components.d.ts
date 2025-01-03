@@ -90,6 +90,7 @@ export interface SharedContactForm extends Struct.ComponentSchema {
     button: Schema.Attribute.Component<'shared.link', false>;
     captcha: Schema.Attribute.Component<'shared.field-data', false>;
     email: Schema.Attribute.Component<'shared.field-data', false>;
+    image: Schema.Attribute.Component<'shared.image', false>;
     name: Schema.Attribute.Component<'shared.field-data', false>;
     phone: Schema.Attribute.Component<'shared.field-data', false>;
     sponsors: Schema.Attribute.Component<'shared.slider', false>;
@@ -236,6 +237,7 @@ export interface SharedFormSection extends Struct.ComponentSchema {
 export interface SharedFormSection2 extends Struct.ComponentSchema {
   collectionName: 'components_shared_form_section2s';
   info: {
+    description: '';
     displayName: 'FormSection2';
     icon: 'brush';
   };
