@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_blog_theme_sections",
+  "info": {
+    "displayName": "BlogThemeSection"
+  },
+  "options": {},
+  "attributes": {
+    "blogThemes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.blog-theme"
+    }
+  }
+}
