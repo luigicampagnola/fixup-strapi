@@ -116,6 +116,12 @@ export default factories.createCoreController(
                       files: true,
                     },
                   },
+                  backgroundImage: {
+                    populate: {
+                      alt: true,
+                      url: true,
+                    },
+                  },
                 },
               },
               mapsData: {
