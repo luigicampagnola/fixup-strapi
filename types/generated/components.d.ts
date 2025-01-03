@@ -31,12 +31,25 @@ export interface SharedBlogCard extends Struct.ComponentSchema {
 export interface SharedBlogPopularPosts extends Struct.ComponentSchema {
   collectionName: 'components_shared_blog_popular_posts';
   info: {
+    description: '';
     displayName: 'BlogPopularPosts';
   };
   attributes: {
     date: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    link: Schema.Attribute.Component<'shared.link', false>;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedBlogPopularPostsSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_blog_popular_posts_sections';
+  info: {
+    displayName: 'BlogPopularPostsSection';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    popularPosts: Schema.Attribute.Component<'shared.blog-popular-posts', true>;
   };
 }
 
@@ -65,24 +78,36 @@ export interface SharedBlogTableContents extends Struct.ComponentSchema {
 export interface SharedBlogTheme extends Struct.ComponentSchema {
   collectionName: 'components_shared_blog_themes';
   info: {
+    description: '';
     displayName: 'BlogTheme';
   };
   attributes: {
     blogTips: Schema.Attribute.Component<'shared.blog-tips', true>;
     cssSelector: Schema.Attribute.String;
-    description: Schema.Attribute.String;
+    description: Schema.Attribute.RichText;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedBlogThemeSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_blog_theme_sections';
+  info: {
+    displayName: 'BlogThemeSection';
+  };
+  attributes: {
+    blogThemes: Schema.Attribute.Component<'shared.blog-theme', true>;
   };
 }
 
 export interface SharedBlogTips extends Struct.ComponentSchema {
   collectionName: 'components_shared_blog_tips';
   info: {
+    description: '';
     displayName: 'BlogTips';
   };
   attributes: {
     cssSelector: Schema.Attribute.String;
-    description: Schema.Attribute.String;
+    description: Schema.Attribute.RichText;
     title: Schema.Attribute.String;
   };
 }
@@ -811,9 +836,11 @@ declare module '@strapi/strapi' {
       'shared.background-image': SharedBackgroundImage;
       'shared.blog-card': SharedBlogCard;
       'shared.blog-popular-posts': SharedBlogPopularPosts;
+      'shared.blog-popular-posts-section': SharedBlogPopularPostsSection;
       'shared.blog-section': SharedBlogSection;
       'shared.blog-table-contents': SharedBlogTableContents;
       'shared.blog-theme': SharedBlogTheme;
+      'shared.blog-theme-section': SharedBlogThemeSection;
       'shared.blog-tips': SharedBlogTips;
       'shared.blog-top-section': SharedBlogTopSection;
       'shared.buttonbar': SharedButtonbar;

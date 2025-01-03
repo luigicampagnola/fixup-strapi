@@ -1,7 +1,8 @@
 {
   "collectionName": "components_shared_blog_tips",
   "info": {
-    "displayName": "BlogTips"
+    "displayName": "BlogTips",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -9,7 +10,7 @@
       "type": "string"
     },
     "description": {
-      "type": "string"
+      "type": "richtext"
     },
     "cssSelector": {
       "type": "string"

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_blog_popular_posts_sections",
+  "info": {
+    "displayName": "BlogPopularPostsSection"
+  },
+  "options": {},
+  "attributes": {
+    "popularPosts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.blog-popular-posts"
+    },
+    "label": {
+      "type": "string"
+    }
+  }
+}
