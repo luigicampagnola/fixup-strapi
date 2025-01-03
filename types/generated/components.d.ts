@@ -488,6 +488,7 @@ export interface SharedOptionSection2 extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     options: Schema.Attribute.Component<'shared.options', true>;
+    position: Schema.Attribute.String;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
