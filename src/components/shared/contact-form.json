@@ -48,10 +48,10 @@
       "repeatable": false,
       "component": "shared.slider"
     },
-    "image": {
+    "backgroundImage": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.image"
+      "component": "shared.background-image"
     }
   }
 }
