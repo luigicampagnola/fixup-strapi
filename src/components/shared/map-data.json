@@ -25,7 +25,7 @@
       "component": "shared.coordinates"
     },
     "link": {
-      "type": "string"
-    }
+      "type": "text"
+    }    
   }
 }
