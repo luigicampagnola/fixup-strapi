@@ -129,7 +129,8 @@ export default factories.createCoreController(
                   title: true,
                   date: true,
                   description: true,
-                  image: true
+                  image: true,
+                  link: true
                 }
               },
               slider: true,
