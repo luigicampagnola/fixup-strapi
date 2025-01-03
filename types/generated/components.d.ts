@@ -521,7 +521,7 @@ export interface SharedOptions extends Struct.ComponentSchema {
     displayName: 'options';
   };
   attributes: {
-    description: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
     label: Schema.Attribute.String;
   };
 }
