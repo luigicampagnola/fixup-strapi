@@ -16,12 +16,14 @@ export interface SharedBackgroundImage extends Struct.ComponentSchema {
 export interface SharedBlogCard extends Struct.ComponentSchema {
   collectionName: 'components_shared_blog_cards';
   info: {
+    description: '';
     displayName: 'BlogCard';
   };
   attributes: {
     date: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    link: Schema.Attribute.Component<'shared.link', false>;
     title: Schema.Attribute.String;
   };
 }
