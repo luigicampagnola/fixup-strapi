@@ -2,7 +2,8 @@
   "collectionName": "components_shared_form_section2s",
   "info": {
     "displayName": "FormSection2",
-    "icon": "brush"
+    "icon": "brush",
+    "description": ""
   },
   "options": {},
   "attributes": {

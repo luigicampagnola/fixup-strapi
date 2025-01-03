@@ -16,40 +16,40 @@ export default factories.createCoreController(
                 populate: {
                   label: true,
                   cssSelector: true,
-                }
+                },
               },
               benefits: {
                 populate: {
                   values: true,
                   position: true,
-                }
+                },
               },
               phone: {
                 populate: {
                   label: true,
-                  href: true
-                }
+                  href: true,
+                },
               },
               countyOptions: {
                 populate: {
                   image: true,
                   title: true,
                   description: true,
-                  link: true
-                }
+                  link: true,
+                },
               },
               image: {
-                populate:{
-                  url: true
-                }
+                populate: {
+                  url: true,
+                },
               },
               rates: {
                 populate: {
                   label: true,
                   subLabel: true,
                   googleLogo: true,
-                  comments: true
-                }
+                  comments: true,
+                },
               },
               contactForm: {
                 populate: {
@@ -63,7 +63,7 @@ export default factories.createCoreController(
                       required: true,
                       warning: true,
                       formatWarning: true,
-                    }
+                    },
                   },
                   phone: {
                     populate: {
@@ -73,7 +73,7 @@ export default factories.createCoreController(
                       required: true,
                       warning: true,
                       formatWarning: true,
-                    }
+                    },
                   },
                   email: {
                     populate: {
@@ -83,7 +83,7 @@ export default factories.createCoreController(
                       required: true,
                       warning: true,
                       formatWarning: true,
-                    }
+                    },
                   },
                   street: {
                     populate: {
@@ -93,7 +93,7 @@ export default factories.createCoreController(
                       required: true,
                       warning: true,
                       formatWarning: true,
-                    }
+                    },
                   },
                   captcha: {
                     populate: {
@@ -103,20 +103,26 @@ export default factories.createCoreController(
                       required: true,
                       warning: true,
                       formatWarning: true,
-                    }
+                    },
                   },
                   button: {
                     populate: {
                       label: true,
-                      url: true
-                    }
+                      url: true,
+                    },
                   },
                   sponsors: {
                     populate: {
-                      files: true
-                    }
-                  }
-                }
+                      files: true,
+                    },
+                  },
+                  backgroundImage: {
+                    populate: {
+                      alt: true,
+                      backgroundImage: true,
+                    },
+                  },
+                },
               },
               blogCards: {
                 populate: {
@@ -133,8 +139,8 @@ export default factories.createCoreController(
                   mapLocations: true,
                   zoom: true,
                   center: true,
-                  link: true
-                }
+                  link: true,
+                },
               },
               cards: {
                 populate: {
@@ -143,9 +149,15 @@ export default factories.createCoreController(
                     populate: {
                       alt: true,
                       src: true,
-                    }
+                    },
                   },
                   options: true,
+                },
+              },
+              backgroundImage: {
+                populate: {
+                  alt: true,
+                  backgroundImage: true,
                 },
               },
             },
@@ -153,7 +165,7 @@ export default factories.createCoreController(
         },
       });
 
-      console.log(results, 'results')
+      console.log(results, "results");
 
       return results;
     },
