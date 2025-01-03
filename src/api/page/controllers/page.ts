@@ -161,6 +161,49 @@ export default factories.createCoreController(
                   options: true,
                 },
               },
+              blogTopSection: {
+                populate: {
+                  image: true,
+                  sharedLinks: true,
+                }
+              },
+              blogTableContents: {
+                populate: {
+                  title: true,
+                  content: {
+                    populate: {
+                      label: true,
+                      cssSelector: true,
+                      subContent: true
+                    }
+                  },
+                }
+              },
+              blogPopularPostSection: {
+                populate: {
+                  popularPosts: {
+                    populate: {
+                      image: true,
+                      link: true,
+                      title: true,
+                      date: true
+                    },
+                  },
+                  label: true,
+                }
+              },
+              blogThemeSection: {
+                populate: {
+                  blogThemes: {
+                    populate: {
+                      title: true,
+                      cssSelector: true,
+                      description: true,
+                      blogTips: true
+                    }
+                  },
+                }
+              },
               backgroundImage: {
                 populate: {
                   alt: true,
