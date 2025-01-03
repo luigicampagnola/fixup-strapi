@@ -18,6 +18,12 @@ export default factories.createCoreController(
                   cssSelector: true,
                 },
               },
+              options: {
+                populate: {
+                  label: true,
+                  description: true,
+                },
+              },
               benefits: {
                 populate: {
                   values: true,
@@ -130,8 +136,8 @@ export default factories.createCoreController(
                   date: true,
                   description: true,
                   image: true,
-                  link: true
-                }
+                  link: true,
+                },
               },
               slider: true,
               mapsData: {
