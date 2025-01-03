@@ -87,10 +87,13 @@ export interface SharedContactForm extends Struct.ComponentSchema {
     displayName: 'ContactForm';
   };
   attributes: {
+    backgroundImage: Schema.Attribute.Component<
+      'shared.background-image',
+      false
+    >;
     button: Schema.Attribute.Component<'shared.link', false>;
     captcha: Schema.Attribute.Component<'shared.field-data', false>;
     email: Schema.Attribute.Component<'shared.field-data', false>;
-    image: Schema.Attribute.Component<'shared.image', false>;
     name: Schema.Attribute.Component<'shared.field-data', false>;
     phone: Schema.Attribute.Component<'shared.field-data', false>;
     sponsors: Schema.Attribute.Component<'shared.slider', false>;
