@@ -185,9 +185,9 @@ export interface SharedCta extends Struct.ComponentSchema {
   attributes: {
     backgroundImage: Schema.Attribute.Component<
       'shared.background-image',
-      true
+      false
     >;
-    button: Schema.Attribute.Component<'shared.link', true>;
+    button: Schema.Attribute.Component<'shared.link', false>;
     description: Schema.Attribute.String;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
