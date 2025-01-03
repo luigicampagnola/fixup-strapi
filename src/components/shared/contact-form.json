@@ -47,6 +47,11 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.slider"
+    },
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.image"
     }
   }
 }
