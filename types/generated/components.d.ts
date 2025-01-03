@@ -13,6 +13,30 @@ export interface SharedBackgroundImage extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedBlogCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_blog_cards';
+  info: {
+    displayName: 'BlogCard';
+  };
+  attributes: {
+    date: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedBlogSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_blog_sections';
+  info: {
+    displayName: 'BlogSection';
+    icon: 'information';
+  };
+  attributes: {
+    blogCards: Schema.Attribute.Component<'shared.blog-card', true>;
+  };
+}
+
 export interface SharedButtonbar extends Struct.ComponentSchema {
   collectionName: 'components_shared_buttonbars';
   info: {
@@ -281,6 +305,20 @@ export interface SharedImage extends Struct.ComponentSchema {
   attributes: {
     alt: Schema.Attribute.String;
     src: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface SharedImagesSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_images_sections';
+  info: {
+    displayName: 'ImagesSection';
+    icon: 'landscape';
+  };
+  attributes: {
+    slider: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
   };
 }
 
@@ -645,6 +683,8 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'shared.background-image': SharedBackgroundImage;
+      'shared.blog-card': SharedBlogCard;
+      'shared.blog-section': SharedBlogSection;
       'shared.buttonbar': SharedButtonbar;
       'shared.card-container': SharedCardContainer;
       'shared.cards': SharedCards;
@@ -665,6 +705,7 @@ declare module '@strapi/strapi' {
       'shared.google-rate': SharedGoogleRate;
       'shared.hero': SharedHero;
       'shared.image': SharedImage;
+      'shared.images-section': SharedImagesSection;
       'shared.information-section': SharedInformationSection;
       'shared.information-section2': SharedInformationSection2;
       'shared.link': SharedLink;
