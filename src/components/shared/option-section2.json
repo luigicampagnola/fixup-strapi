@@ -28,11 +28,11 @@
         "audios"
       ]
     },
-    "description": {
-      "type": "text"
-    },
     "position": {
       "type": "string"
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }
