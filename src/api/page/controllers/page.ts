@@ -119,7 +119,7 @@ export default factories.createCoreController(
                   backgroundImage: {
                     populate: {
                       alt: true,
-                      url: true,
+                      backgroundImage: true,
                     },
                   },
                 },
