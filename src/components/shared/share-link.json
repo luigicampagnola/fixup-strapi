@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_share_links",
+  "info": {
+    "displayName": "ShareLink"
+  },
+  "options": {},
+  "attributes": {
+    "facebook": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    }
+  }
+}

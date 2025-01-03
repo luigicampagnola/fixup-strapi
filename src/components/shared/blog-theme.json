@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_blog_themes",
+  "info": {
+    "displayName": "BlogTheme"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "cssSelector": {
+      "type": "string"
+    },
+    "blogTips": {
+      "displayName": "BlogTips",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.blog-tips"
+    }
+  }
+}

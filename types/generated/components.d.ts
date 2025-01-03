@@ -28,6 +28,18 @@ export interface SharedBlogCard extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedBlogPopularPosts extends Struct.ComponentSchema {
+  collectionName: 'components_shared_blog_popular_posts';
+  info: {
+    displayName: 'BlogPopularPosts';
+  };
+  attributes: {
+    date: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedBlogSection extends Struct.ComponentSchema {
   collectionName: 'components_shared_blog_sections';
   info: {
@@ -36,6 +48,53 @@ export interface SharedBlogSection extends Struct.ComponentSchema {
   };
   attributes: {
     blogCards: Schema.Attribute.Component<'shared.blog-card', true>;
+  };
+}
+
+export interface SharedBlogTableContents extends Struct.ComponentSchema {
+  collectionName: 'components_shared_blog_table_contents';
+  info: {
+    displayName: 'BlogTableContents';
+  };
+  attributes: {
+    content: Schema.Attribute.Component<'shared.scroll-to-label', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedBlogTheme extends Struct.ComponentSchema {
+  collectionName: 'components_shared_blog_themes';
+  info: {
+    displayName: 'BlogTheme';
+  };
+  attributes: {
+    blogTips: Schema.Attribute.Component<'shared.blog-tips', true>;
+    cssSelector: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedBlogTips extends Struct.ComponentSchema {
+  collectionName: 'components_shared_blog_tips';
+  info: {
+    displayName: 'BlogTips';
+  };
+  attributes: {
+    cssSelector: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedBlogTopSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_blog_top_sections';
+  info: {
+    displayName: 'BlogTopSection';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    sharedLinks: Schema.Attribute.Component<'shared.share-link', false>;
   };
 }
 
@@ -447,7 +506,7 @@ export interface SharedMapData extends Struct.ComponentSchema {
   attributes: {
     center: Schema.Attribute.Component<'shared.coordinates', false>;
     label: Schema.Attribute.String;
-    link: Schema.Attribute.String;
+    link: Schema.Attribute.Text;
     mapLocations: Schema.Attribute.Component<'shared.list', true>;
     zoom: Schema.Attribute.Integer;
   };
@@ -608,6 +667,18 @@ export interface SharedScrollTo extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedScrollToLabel extends Struct.ComponentSchema {
+  collectionName: 'components_shared_scroll_to_labels';
+  info: {
+    displayName: 'ScrollToLabel';
+  };
+  attributes: {
+    cssSelector: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    subContent: Schema.Attribute.Component<'shared.sub-scroll-to', true>;
+  };
+}
+
 export interface SharedSeo extends Struct.ComponentSchema {
   collectionName: 'components_shared_seos';
   info: {
@@ -651,6 +722,19 @@ export interface SharedServices extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedShareLink extends Struct.ComponentSchema {
+  collectionName: 'components_shared_share_links';
+  info: {
+    displayName: 'ShareLink';
+  };
+  attributes: {
+    facebook: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    linkedin: Schema.Attribute.String;
+    twitter: Schema.Attribute.String;
+  };
+}
+
 export interface SharedSlider extends Struct.ComponentSchema {
   collectionName: 'components_shared_sliders';
   info: {
@@ -660,6 +744,17 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
   attributes: {
     files: Schema.Attribute.Media<'images', true>;
+  };
+}
+
+export interface SharedSubScrollTo extends Struct.ComponentSchema {
+  collectionName: 'components_shared_sub_scroll_tos';
+  info: {
+    displayName: 'SubScrollTo';
+  };
+  attributes: {
+    cssSelector: Schema.Attribute.String;
+    label: Schema.Attribute.String;
   };
 }
 
@@ -715,7 +810,12 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'shared.background-image': SharedBackgroundImage;
       'shared.blog-card': SharedBlogCard;
+      'shared.blog-popular-posts': SharedBlogPopularPosts;
       'shared.blog-section': SharedBlogSection;
+      'shared.blog-table-contents': SharedBlogTableContents;
+      'shared.blog-theme': SharedBlogTheme;
+      'shared.blog-tips': SharedBlogTips;
+      'shared.blog-top-section': SharedBlogTopSection;
       'shared.buttonbar': SharedButtonbar;
       'shared.card-container': SharedCardContainer;
       'shared.cards': SharedCards;
@@ -757,10 +857,13 @@ declare module '@strapi/strapi' {
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.scroll-to': SharedScrollTo;
+      'shared.scroll-to-label': SharedScrollToLabel;
       'shared.seo': SharedSeo;
       'shared.service-module': SharedServiceModule;
       'shared.services': SharedServices;
+      'shared.share-link': SharedShareLink;
       'shared.slider': SharedSlider;
+      'shared.sub-scroll-to': SharedSubScrollTo;
       'shared.text-list': SharedTextList;
       'shared.top-bar': SharedTopBar;
       'shared.top-section': SharedTopSection;
