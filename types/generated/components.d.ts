@@ -67,16 +67,13 @@ export interface SharedBlogSection extends Struct.ComponentSchema {
 export interface SharedBlogSlugSection extends Struct.ComponentSchema {
   collectionName: 'components_shared_blog_slug_sections';
   info: {
+    description: '';
     displayName: 'BlogSlugSection';
     icon: 'bulletList';
   };
   attributes: {
     blogPopularPostSection: Schema.Attribute.Component<
       'shared.blog-popular-posts-section',
-      false
-    >;
-    blogTableContents: Schema.Attribute.Component<
-      'shared.blog-table-contents',
       false
     >;
     blogThemeSection: Schema.Attribute.Component<
