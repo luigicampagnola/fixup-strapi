@@ -582,6 +582,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'shared.blog-theme-section',
         'shared.blog-popular-posts-section',
         'shared.blog-slug-section',
+        'shared.top-section2',
       ]
     >;
     publishedAt: Schema.Attribute.DateTime;

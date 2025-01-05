@@ -853,6 +853,24 @@ export interface SharedTopSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTopSection2 extends Struct.ComponentSchema {
+  collectionName: 'components_shared_top_section2s';
+  info: {
+    displayName: 'TopSection2';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Component<
+      'shared.background-image',
+      false
+    >;
+    date: Schema.Attribute.String;
+    link: Schema.Attribute.Component<'shared.link', false>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    titlePosition: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -918,6 +936,7 @@ declare module '@strapi/strapi' {
       'shared.text-list': SharedTextList;
       'shared.top-bar': SharedTopBar;
       'shared.top-section': SharedTopSection;
+      'shared.top-section2': SharedTopSection2;
     }
   }
 }

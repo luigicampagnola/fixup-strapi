@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_top_section2s",
+  "info": {
+    "displayName": "TopSection2"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "titlePosition": {
+      "type": "string"
+    },
+    "backgroundImage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.background-image"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    }
+  }
+}
