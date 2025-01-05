@@ -856,6 +856,7 @@ export interface SharedTopSection extends Struct.ComponentSchema {
 export interface SharedTopSection2 extends Struct.ComponentSchema {
   collectionName: 'components_shared_top_section2s';
   info: {
+    description: '';
     displayName: 'TopSection2';
   };
   attributes: {
@@ -863,8 +864,8 @@ export interface SharedTopSection2 extends Struct.ComponentSchema {
       'shared.background-image',
       false
     >;
+    button: Schema.Attribute.Component<'shared.link', false>;
     date: Schema.Attribute.String;
-    link: Schema.Attribute.Component<'shared.link', false>;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
     titlePosition: Schema.Attribute.String;
