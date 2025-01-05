@@ -50,7 +50,8 @@
         "shared.blog-table-contents",
         "shared.blog-theme-section",
         "shared.blog-popular-posts-section",
-        "shared.blog-slug-section"
+        "shared.blog-slug-section",
+        "shared.top-section2"
       ]
     }
   }
