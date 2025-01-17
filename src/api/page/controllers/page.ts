@@ -30,6 +30,7 @@ export default factories.createCoreController(
                   position: true,
                 },
               },
+              shareImage: true,
               phone: {
                 populate: {
                   label: true,
